@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NOAIM AHMAD • Portfolio</title>
+    <meta name="description" content="Portfolio of Your Name — Frontend Developer. Projects, skills, and contact." />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+
+</head>
+
+<body>
+    <!-- Skip link -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Scroll progress -->
+    <div class="progress" aria-hidden="true"><span class="bar"></span></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Primary">
+            <a class="brand" href="#home" aria-label="Homepage">NOAIM<span>AHMAD</span></a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+                <span class="line"></span><span class="line"></span><span class="line"></span>
+            </button>
+
+            <ul id="primary-nav" class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="themeToggle" class="btn-icon" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero container">
+        <div class="hero-media parallax" aria-hidden="true">
+            <img src="portfolio_circle.png" class="my-image">
+            <div class="blob"></div>
+            <div class="orb"></div>
+            <div class="ring"></div>
+        </div>
+        <div class="hero-text">
+            <!-- <p class="eyebrow">Frontend Developer • </p>
+            <p>Frontend developer with a strong eye for detail and a love for crafting beautiful, functional interfaces.
+                 -->
+            <h1 class="reveal-up">Hey, I’m <span>Noaim Ahmad Frontend Developer</span></h1>
+            <p class="sub reveal-up delay-1">I build elegant, high-performance websites with clean code and modern
+                design principles — turning ideas into seamless digital experiences..</p>
+            <div class="cta reveal-up delay-2">
+                <a class="btn" href="#projects">See Projects</a>
+                <a class="btn-ghost" href="#contact">Hire Me</a>
+            </div>
+            <ul class="stack reveal-up delay-3" aria-label="Tech stack">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Bootstrap</li>
+            </ul>
+        </div>
+    </section>
+
+    <main id="main">
+        <!-- About -->
+        <section id="about" class="section container">
+            <header class="section-head">
+                <h2>About</h2>
+                <p>I build real-world UIs with attention to performance, accessibility, and maintainability.</p>
+            </header>
+            <div class="about-grid">
+                <article class="card reveal">
+                    <h3>What I Do</h3>
+                    <p>I build responsive websites and small web apps using HTML, CSS, and JavaScript. I enjoy learning
+                        new technologies and I’m currently exploring Shopify development.</p>
+                </article>
+                <article class="card reveal">
+                    <h3>Skills</h3>
+                    <ul class="pill-list">
+                        <li>Semantic HTML</li>
+                        <li>Modern CSS</li>
+                        <li>Bootstrap</li>
+                        <li>JS</li>
+                        <li>React</li>
+                        <li>APIs</li>
+                        <li>Git & GitHub</li>
+
+                    </ul>
+                </article>
+                <article class="card reveal">
+                    <h3>Results</h3>
+                    <ul class="ticks">
+                        <li>Created multiple practice projects (portfolio, calculators, search apps).</li>
+                        <li>Integrated free APIs into web apps.</li>
+                        <li>Published projects on GitHub.</li>
+                        <li>Currently learning Shopify to build e-commerce solutions.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section container">
+            <header class="section-head">
+                <h2>Projects</h2>
+                <p>Filter, search, and open details.</p>
+                <div class="controls">
+                    <div class="filters">
+                        <button class="chip active" data-filter="all">All</button>
+                        <button class="chip" data-filter="web">Web</button>
+                        <button class="chip" data-filter="app">App</button>
+                        <button class="chip" data-filter="tools">Tools</button>
+                    </div>
+                    <label class="search">
+                        <span class="visually-hidden">Search projects</span>
+                        <input id="searchInput" type="search" placeholder="Search projects…" />
+                    </label>
+                </div>
+            </header>
+
+            <div id="projectGrid" class="grid" aria-live="polite"></div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section container">
+            <header class="section-head">
+                <h2>Contact</h2>
+                <p>Have a project in mind? Let’s talk.</p>
+            </header>
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xvgwqgnq" method="POST"> 
+
+                <div class="row">
+                    <input name="name" type="text" placeholder="Your name" autocomplete="name" required />
+                    <input name="email" type="email" placeholder="Your email" autocomplete="email" required />
+                </div>
+
+                <textarea name="message" rows="11" placeholder="Your message" required></textarea>
+
+               
+                I agree to be contacted back
+                <input type="checkbox" id="consent" required />
+
+                <input type="hidden" name="_subject" value="New message from your portfolio" />
+
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" />
+
+                <button class="btn" type="submit">Send Message</button>
+                <p id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container foot">
+            <p>© <span id="year"></span> NOAIM AHMAD — All rights reserved.</p>
+            <a class="top" href="#home" aria-label="Back to top">↑</a>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <dialog id="projectModal" aria-labelledby="modalTitle">
+        <article class="modal-card">
+            <button class="close" aria-label="Close">×</button>
+            <img class="modal-cover" alt="Project cover" />
+            <div class="modal-body">
+                <h3 id="modalTitle" class="modal-title"></h3>
+                <p class="modal-desc"></p>
+                <div class="modal-tags"></div>
+                <div class="modal-actions">
+                    <a class="btn" target="_blank" rel="noopener" id="liveDemo">Live Demo</a>
+                    <a class="btn-ghost" target="_blank" rel="noopener" id="sourceCode">Source</a>
+                </div>
+            </div>
+        </article>
+    </dialog>
+</body>
+
+
+
+
+</html>
